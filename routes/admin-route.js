@@ -4,6 +4,10 @@ const adminController = require("../controllers/admin");
 const category = adminController.category;
 const post = adminController.post;
 
+router.get('/', (req, res) => {
+    res.send("Admin home");
+    console.log("admin home");
+})
 
 router.get('/add-category/:categoryName', category);
 

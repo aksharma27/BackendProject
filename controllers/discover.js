@@ -9,7 +9,7 @@ const like = async(req, res, next) => {
         }
 
         let likeValue;
-        const imgDetails = await GalleryModel.findOne({_id: imageId};
+        const imgDetails = await GalleryModel.findOne({_id: imageId});
             
             if(imgDetails){
                 if(imgDetails.likes){
@@ -75,4 +75,4 @@ const shuffle = async (req, res, next) =>{
     }
 };
 
-module.export = {shuffle, like};
+module.exports = {shuffle, like};

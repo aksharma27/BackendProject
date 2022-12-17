@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config({ path: 'config.env' });
 const dbconn = require('./config/db');
 const admin = require("./routes/admin-route");
-// const discover = require("./routes/discover-route");
+const discover = require("./routes/discover-route");
 
 
 
@@ -23,6 +23,9 @@ app.get('/api/health', (req, res) =>{
         status: "Active"
     });
 });
+
+app.use('api/admin', admin);
+app.use('api/discover', discover);
 
 
 
