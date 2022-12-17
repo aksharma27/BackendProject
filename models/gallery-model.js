@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-const gallerySchema = new Schema({
+const gallerySchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -18,7 +18,7 @@ const gallerySchema = new Schema({
         type: String,
         required: true
     }
-}
+},
     {timestamps: {createdAt: "createdAt", updatedAt: "updatedAt"}}
 )
 

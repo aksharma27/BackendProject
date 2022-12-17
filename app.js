@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 require('dotenv').config({ path: 'config.env' });
 const dbconn = require('./config/db');
+const admin = require("./routes/admin-route");
+// const discover = require("./routes/discover-route");
 
 
 
